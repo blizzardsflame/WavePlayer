@@ -9,8 +9,8 @@ import {
 const Player = ({ currentSong, isPlaying, setisPlaying }) => {
   //State
   const [songInfo, setSongInfo] = useState({
-    currentTime: null,
-    duration: null,
+    currentTime: 0,
+    duration: 0,
   });
   // Refs
   const audioRef = useRef(null);
