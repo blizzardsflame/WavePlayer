@@ -1,6 +1,5 @@
 .player {
   min-height: 20vh;
-  background-color: rgb(106, 160, 95);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -8,7 +7,6 @@
 }
 .time-control {
   width: 50%;
-  background-color: coral;
   display: flex;
   input {
     width: 100%;
@@ -19,7 +17,6 @@
   }
 }
 .play-control {
-  background-color: darkgoldenrod;
   display: flex;
   justify-content: space-between;
   align-items: center;
