@@ -1,6 +1,7 @@
 import { useRef, useState } from "react";
 // Styles
 import "./styles/app.scss";
+import wave from "./wave.svg";
 // Components
 import Song from "./components/Song";
 import Player from "./components/Player";
@@ -74,6 +75,9 @@ function App() {
         src={currentSong.audio}
         onEnded={songEnd}
       ></audio>
+      <div className="card">
+        <img src={wave} alt="wave" className="wave" />
+      </div>
     </div>
   );
 }
