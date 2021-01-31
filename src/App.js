@@ -1,5 +1,5 @@
 import { useRef, useState } from "react";
-// Style
+// Styles
 import "./styles/app.scss";
 // Components
 import Song from "./components/Song";
@@ -18,6 +18,7 @@ function App() {
   const [songInfo, setSongInfo] = useState({
     currentTime: 0,
     duration: 0,
+    animationPercentage: 0,
   });
   // Refs
   const audioRef = useRef(null);
@@ -25,10 +26,18 @@ function App() {
   const timeHandler = (e) => {
     const currentTimeup = e.target.currentTime;
     const durationup = e.target.duration;
+    // Get percentage
+    const roundedCurrent = Math.round(currentTimeup);
+    const roundedDuration = Math.round(durationup);
+    const animationPercentage = Math.round(
+      (roundedCurrent / roundedDuration) * 100
+    );
+    console.log(animationPercentage);
     setSongInfo({
       ...songInfo,
       currentTime: currentTimeup,
       duration: durationup,
+      animationPercentage: animationPercentage,
     });
   };
 
