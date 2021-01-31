@@ -6,6 +6,7 @@ import {
   faAngleLeft,
   faAngleRight,
 } from "@fortawesome/free-solid-svg-icons";
+import { playAudio } from "../util";
 
 const Player = ({
   audioRef,
@@ -45,6 +46,7 @@ const Player = ({
         songs[currentIndex === 0 ? songs.length - 1 : currentIndex - 1]
       );
     }
+    playAudio(isPlaying, audioRef);
   };
   useEffect(() => {
     const newSongs = songs.map((song) => {
