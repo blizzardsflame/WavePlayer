@@ -32,7 +32,6 @@ function App() {
     const animationPercentage = Math.round(
       (roundedCurrent / roundedDuration) * 100
     );
-    console.log(animationPercentage);
     setSongInfo({
       ...songInfo,
       currentTime: currentTimeup,
